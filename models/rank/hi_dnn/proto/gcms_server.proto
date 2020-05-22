@@ -1,0 +1,97 @@
+syntax = "proto3";
+import "item_info.proto";
+package gcms_server;
+option go_package = "gcms/protos/gcms_server";
+// The gcms service definition.
+service Gcms {
+  rpc InsertItemInfo (GcmsInsertItemInfoRequest) returns (GcmsInsertItemInfoReply) {}
+  rpc UpdateItemInfo (GcmsUpdateItemInfoRequest) returns (GcmsUpdateItemInfoReply) {}
+  rpc GetItemInfo (GcmsGetItemInfoRequest) returns (GcmsGetItemInfoReply) {}
+  rpc DeleteItemInfo (GcmsDeleteItemInfoRequest) returns (GcmsDeleteItemInfoReply) {}
+  rpc GetItemTags (GcmsGetItemTagsRequest) returns (GcmsGetItemTagsReply) {}
+  rpc IncItemPvs (GcmsIncItemPvsRequest) returns (GcmsIncItemPvsReply) {}
+  rpc GetItemPvs (GcmsGetItemPvsRequest) returns (GcmsGetItemPvsReply) {}
+}
+
+message ItemKVPair {
+  string item_id = 1;
+  string item_content = 2;
+}
+
+message GcmsInsertItemInfoRequest {
+  repeated ItemKVPair items = 1;
+}
+
+message GcmsInsertItemInfoReply {
+  int32 status = 1;
+  string msg = 2;
+}
+
+message GcmsUpdateItemInfoRequest {
+  repeated ItemKVPair items = 1;
+}
+
+message GcmsUpdateItemInfoReply {
+  int32 status = 1;
+  string msg = 2;
+}
+
+message GcmsGetItemInfoRequest {
+  repeated string item_ids = 1;
+}
+
+message GcmsGetItemInfoReply {
+  int32 status = 1;
+  string msg = 2;
+  repeated item_info.ItemInfo item_content = 3;
+}
+
+message GcmsDeleteItemInfoRequest {
+  repeated string item_ids = 1;
+}
+
+message GcmsDeleteItemInfoReply {
+  int32 status = 1;
+  string msg = 2;
+}
+
+message ItemTagsPair {
+  string item_id = 1;
+  repeated item_info.Topic topics = 2;//文章类别（主题标签）
+  repeated item_info.Tag tags = 3; //文章标签（实体标签）
+}
+
+message GcmsGetItemTagsRequest {
+  repeated string item_ids = 1;
+}
+
+message GcmsGetItemTagsReply {
+  int32 status = 1;
+  string msg = 2;
+  repeated ItemTagsPair item_tags_pair = 3;
+}
+
+message GcmsIncItemPvsRequest {
+  repeated string item_ids = 1;
+}
+
+message GcmsIncItemPvsReply {
+  int32 status = 1;
+  string msg = 2;
+}
+
+message ItemPvsPair {
+  string item_id = 1;
+  int32 page_view = 2;
+}
+
+message GcmsGetItemPvsRequest {
+  repeated string item_ids = 1;
+}
+
+message GcmsGetItemPvsReply {
+  int32 status = 1;
+  string msg = 2;
+  repeated ItemPvsPair item_pvs_pair = 3;
+}
+

@@ -116,6 +116,7 @@ class TranspileTrainer(Trainer):
                 reader, reader_class, state, self._config_yaml)
         else:
             padding = envs.get_global_env("padding", 0, namespace)
+            print(">>>>>>>>>INSTANCE slot reader>>>>>>>>")
             pipe_cmd = "python {} {} {} {} {} {} {} {}".format(
                 reader, "slot", "slot", self._config_yaml, namespace, \
                 sparse_slots.replace(" ", "#"), dense_slots.replace(" ", "#"), str(padding))
@@ -283,7 +284,7 @@ class TranspileTrainer(Trainer):
                     metrics = [epoch, batch_id]
                     metrics.extend(metrics_rets)
 
-                    if batch_id % 2 == 0 and batch_id != 0:
+                    if batch_id % 1 == 0 and batch_id != 0:
                         print(metrics_format.format(*metrics))
                     batch_id += 1
             except fluid.core.EOFException:

@@ -1,0 +1,16 @@
+syntax = "proto3";
+import "item_info.proto";
+import "user_info.proto";
+package sample;
+option cc_generic_services = false;
+
+message SampleContext {
+    item_info.ItemInfo item_info = 1;
+};
+
+message Sample {
+    uint64 logid = 1; 
+    uint64 timestamp = 2; 
+    user_info.UserInfo  user_info = 3; // 一个用户
+    repeated SampleContext sample_context = 4; // sample for one user 
+}

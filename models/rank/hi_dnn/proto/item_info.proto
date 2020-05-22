@@ -1,0 +1,107 @@
+syntax="proto3";
+package item_info;
+
+message ItemInfo {
+    string item_id = 1;                            //文章统一ID
+    string url = 2;                                //文章url
+    string url_sign = 3;                            //url sign， 用于重复过滤
+    string title = 4;                            //title
+    string title_sign = 5;                        //title sign，用于重复过滤
+    string content = 6;                            //原始content
+    string content_sign = 7;                        //content sign，用于重复过滤
+    string summary = 8;                            //摘要
+    string summary_sign = 9;                        //摘要 sign，用于重复过滤
+    string resource = 10;                        //文章来源
+    string author_name = 11;                     //文章作者名
+    string author_id =   12;                     //文章作者id
+    uint32 view_freq = 13;                      //文章被浏览次数
+    uint32 comment_freq = 14;                   //文章被评论次数
+    uint32 liked_freq = 15;                     //文章被点赞次数
+    uint32 marked_freq = 16;                    //文章被收藏次数
+    ImageInfo image_info = 17;                    //文章图片，用于推荐列表展现or过滤
+    repeated Topic topics = 18;            //文章类别（主题标签）
+    repeated Tag tags = 19;                        //文章标签（实体标签）
+    string content_type = 20;                    //文章类型
+    float content_quality = 21;                    //文章质量打分
+    float antiporn_score = 22;                    //文章黄反打分
+    float sensitive_score = 23;                    //文章敏感性打分
+
+    int64 create_time = 24;                        //入库时间
+    int64 update_time = 25;                        //更新时间
+    int64 publish_time = 26;                    //文章发布时间
+};
+
+message Topic {
+    string term = 1;    // 类别标签，例如"自然语言处理"
+    float weight = 2;   // 权重
+    string path = 3;    // 标签树路径，例如"人工智能-自然语言处理"
+};
+
+message Tag {
+    string term = 1;
+    float weight = 2;
+    string resource = 3;                            //标签来源：物料已有标签 or 内容模型生成标签
+};
+
+message ImageInfo {
+    repeated Image images = 1;                    //图片列表
+    float image_quality = 2;                    //图片整体质量
+};
+
+message Image {
+    string url = 1;                            //图片url
+    uint32 weight = 2;                        //图片宽
+    uint32 height = 3;                        //图片高
+};
+
+/* item_info字段样例
+{
+    "item_id": "xxx",                            // 文章统一ID
+    "url": "xxx",                                   // url
+    "url_sign": 12108001409538814299,               // url sign， 用于重复过滤
+    "title": "xxx",                                 // title
+    "title_sign": "",                               // title sign，用于重复过滤
+    "content": "",                                  // 原始content
+    "content_sign":"",                              // content sign，用于重复过滤
+    "summary": "",                                  // 摘要
+    "summary_sign": "",                             // 摘要 sign，用于重复过滤
+    "resource": "wiki",                                //文章来源
+    "author_name": "",                           //文章作者名
+    "author_id":  "12",                          //文章作者id
+    "view_freq": 13,                              //文章被浏览次数
+    "comment_freq": 14,                           //文章被评论次数
+    "liked_freq": 15,                            //文章被点赞次数
+    "marked_freq": 16,                          //文章被收藏次数
+    "image_info": {
+        "images":[                                     // 文章图片，用于推荐列表展现
+            {
+                "url":"xxx",
+                "weight": 120,
+                "height": 120
+            }
+        ],
+        "image_quality": 0.9
+    },
+    "topic_categorys":[                             // 文章类别（主题标签）
+        {
+            "term": "自然语言处理",
+            "weight": 0.9,
+            "path": "人工智能-自然语言处理"
+        }
+    ],
+    "entity_tags":[                                        // 文章标签，用于相关召回
+        {
+            "term": "nlp",
+            "weight": 0.8,
+            "resource": "model",                         // 标签来源：物料已有标签 or 内容模型生成标签
+        }
+    ],
+    "content_type": "",                             // 文章类型
+    "content_quality": 0.9,                         // 文章质量打分
+    "antiporn_score": 0.2,                          // 文章黄反打分
+    "sensitive_score": 0.1,                         // 文章黄反打分
+    "create_time": 1559870644,                      // 入库时间
+    "update_time": 1559870644,                      // 更新时间
+    "publish_time": 1559870644,                     // 发布时间
+}
+*/

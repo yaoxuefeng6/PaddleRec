@@ -1,0 +1,16 @@
+class_name: "MultiTrainer"
+device_worker_name: "HogwildWorker"
+thread_num: 1
+debug: false
+fetch_config {
+  fetch_var_names: "auc_0.tmp_0"
+  fetch_var_names: "log_hash"
+  fetch_var_names: "fc_4.tmp_2"
+  fetch_var_names: "label"
+  fetch_var_str_format: "AUC"
+  fetch_var_str_format: "log_hash"
+  fetch_var_str_format: "predict_q"
+  fetch_var_str_format: "label"
+  print_period: 20
+}
+thread_barrier: false

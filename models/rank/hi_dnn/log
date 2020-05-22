@@ -1,0 +1,1541 @@
+engines: 
+{'TRANSPILER': {'CLUSTER': <function cluster_engine at 0x7fca09764de8>, 'SINGLE': <function single_engine at 0x7fca09764d70>, 'LOCAL_CLUSTER': <function local_cluster_engine at 0x7fca09764ed8>}, 'PSLIB': {'CLUSTER': <function cluster_mpi_engine at 0x7fca09764e60>, 'SINGLE': <function local_mpi_engine at 0x7fca09764f50>, 'LOCAL_CLUSTER': <function local_mpi_engine at 0x7fca09764f50>}}
+use SingleTrainer engine to run model: config.yaml
+
+====================================================================================================
+                Runtime Envs                      Value                                             
+----------------------------------------------------------------------------------------------------
+train.trainer.platform                            LINUX                                             
+train.trainer.strategy                            async                                             
+train.trainer.trainer                             SingleTrainer                                     
+train.trainer.engine                              single                                            
+train.trainer.threads                             2                                                 
+====================================================================================================
+
+
+=========================================================================================================
+              paddlerec Global Envs                    Value                                             
+---------------------------------------------------------------------------------------------------------
+evaluate.reader.class                                  ... dleRec/models/rank/hi_dnn/infer_slot_reader.py
+train.reader.slot_list_conf                            ... ddleRec/models/rank/hi_dnn/conf/slot_list.conf
+train.save.increment.epoch_interval                    1                                                 
+evaluate.reader.test_data_path                         ... ddlerec/PaddleRec/models/rank/hi_dnn/data/test
+train.reader.reader_debug_mode                         False                                             
+train.save.inference.dirname                           inference                                         
+train.model.hyper_parameters.sparse_feature_number     1000001                                           
+train.save.increment.dirname                           increment                                         
+train.save.inference.feed_varnames                     ['1001', '1002', '1003', '1004', '1005', '2001', '2002', '2004', '2005', '2006']
+evaluate.is_return_numpy                               False                                             
+train.model.hyper_parameters.sparse_feature_dim        9                                                 
+train.save.inference.fetch_varnames                    ['fc_4.tmp_2']                                    
+train.workspace                                        paddlerec.models.rank.hi_dnn                      
+train.reader.train_data_path                           ... leRec/models/rank/hi_dnn/data/train_data_whole
+evaluate.reader.batch_size                             50                                                
+train.save.increment.save_last                         True                                              
+train.trainer.strategy                                 async                                             
+train.save.inference.epoch_interval                    1                                                 
+train.model.hyper_parameters.learning_rate             0.001                                             
+train.model.hyper_parameters.dense_input_dim           13                                                
+train.model.sparse_inputs_slots                        ['1001', '1002', '1003', '1004', '1005', '2001', '2002', '2004', '2005', '2006']
+train.epochs                                           1                                                 
+train.reader.batch_size                                16                                                
+train.model.models                                     ... addlerec/PaddleRec/models/rank/hi_dnn/model.py
+train.reader.class                                     ... ec/PaddleRec/models/rank/hi_dnn/slot_reader.py
+train.save.inference.save_last                         True                                              
+evaluate.workspace                                     paddlerec.models.rank.hi_dnn                      
+train.model.hyper_parameters.optimizer                 adam                                              
+train.model.hyper_parameters.fc_sizes                  [512, 256, 128, 32]                               
+=========================================================================================================
+
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.767656]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.767656]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.575205]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.662236]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.445183]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.63007]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.43388]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.589661]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.614863]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.595532]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.494665]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.581978]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.613115]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.58567]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.608444]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.58948]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.374718]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.571572]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.886388]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.604585]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.445312]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.606562]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.625623]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.655146]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.680173]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.612049]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.680721]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.900046]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.689807]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.460815]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.703734]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.974843]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.717767]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.935737]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.728303]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.740496]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.936321]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.748867]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.746995]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.750035]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.86064]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.765246]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.95035]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.784974]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.983902]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.800323]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.807149]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.799722]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.804395]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.810822]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.470219]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.814382]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.998433]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.81905]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.824264]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.829291]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.834034]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.838488]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.842687]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.495298]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.844194]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.404311]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.840548]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.493016]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.837975]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.55894]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.835496]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.3612]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.829224]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.450875]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.822408]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.433651]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.818807]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.412975]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.815778]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.459683]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.812246]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.61173]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.809278]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.563951]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.805433]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.546667]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.803063]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.738133]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.801796]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.827024]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.801301]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.851763]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.801786]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.483782]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.798923]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.638085]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.796351]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.756329]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.795402]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.560127]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.793474]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.796374]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.799291]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.802583]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.805776]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.80886]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.81184]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.81472]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.817505]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.8202]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.822809]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.825336]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.827785]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.830159]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.832463]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.834698]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.836868]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.838976]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.841025]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.843016]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.844953]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.846837]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.84867]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.850456]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.852194]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.853888]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.855539]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.857149]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.858718]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.860249]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.861744]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.47293]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.853243]
+	
+BATCH_AUC	auc_0.tmp_1		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0]
+	
+AUC	auc_0.tmp_0		lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.851624]
+	
+epoch 0 using time 67.9196870327, speed 407.10 lines/s
+batch_size: 50
+Begin to infer No.0 model, model_dir: increment/0
+epoch: 0, batch: 2, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.853168]
+
+epoch: 0, batch: 4, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.853612]
+
+epoch: 0, batch: 6, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.854052]
+
+epoch: 0, batch: 8, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.85449]
+
+epoch: 0, batch: 10, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.854925]
+
+epoch: 0, batch: 12, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.855356]
+
+epoch: 0, batch: 14, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.855784]
+
+epoch: 0, batch: 16, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.85621]
+
+epoch: 0, batch: 18, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.856632]
+
+epoch: 0, batch: 20, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.857051]
+
+epoch: 0, batch: 22, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.857467]
+
+epoch: 0, batch: 24, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.857881]
+
+epoch: 0, batch: 26, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.858291]
+
+epoch: 0, batch: 28, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.858699]
+
+epoch: 0, batch: 30, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.859104]
+
+epoch: 0, batch: 32, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.859506]
+
+epoch: 0, batch: 34, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.859905]
+
+epoch: 0, batch: 36, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.860302]
+
+epoch: 0, batch: 38, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.860696]
+
+epoch: 0, batch: 40, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.861087]
+
+epoch: 0, batch: 42, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.861475]
+
+epoch: 0, batch: 44, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.861861]
+
+epoch: 0, batch: 46, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.862244]
+
+epoch: 0, batch: 48, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.862625]
+
+epoch: 0, batch: 50, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.863003]
+
+epoch: 0, batch: 52, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.863379]
+
+epoch: 0, batch: 54, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.863752]
+
+epoch: 0, batch: 56, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.864122]
+
+epoch: 0, batch: 58, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.864491]
+
+epoch: 0, batch: 60, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.864856]
+
+epoch: 0, batch: 62, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.86522]
+
+epoch: 0, batch: 64, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.865581]
+
+epoch: 0, batch: 66, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.865939]
+
+epoch: 0, batch: 68, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.866296]
+
+epoch: 0, batch: 70, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.86665]
+
+epoch: 0, batch: 72, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.867001]
+
+epoch: 0, batch: 74, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.867351]
+
+epoch: 0, batch: 76, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.867698]
+
+epoch: 0, batch: 78, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.868043]
+
+epoch: 0, batch: 80, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.868386]
+
+epoch: 0, batch: 82, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.868726]
+
+epoch: 0, batch: 84, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869065]
+
+epoch: 0, batch: 86, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869401]
+
+epoch: 0, batch: 88, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869735]
+
+epoch: 0, batch: 90, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.870067]
+
+epoch: 0, batch: 92, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.870397]
+
+epoch: 0, batch: 94, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.870725]
+
+epoch: 0, batch: 96, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.871051]
+
+epoch: 0, batch: 98, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.871375]
+
+epoch: 0, batch: 100, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.871697]
+
+epoch: 0, batch: 102, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.872016]
+
+epoch: 0, batch: 104, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.872334]
+
+epoch: 0, batch: 106, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.87265]
+
+epoch: 0, batch: 108, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.872964]
+
+epoch: 0, batch: 110, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.873277]
+
+epoch: 0, batch: 112, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.873587]
+
+epoch: 0, batch: 114, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.873895]
+
+epoch: 0, batch: 116, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.874202]
+
+epoch: 0, batch: 118, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.874506]
+
+epoch: 0, batch: 120, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.874809]
+
+epoch: 0, batch: 122, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.87511]
+
+epoch: 0, batch: 124, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.875409]
+
+epoch: 0, batch: 126, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.875707]
+
+epoch: 0, batch: 128, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.876002]
+
+epoch: 0, batch: 130, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.876296]
+
+epoch: 0, batch: 132, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.876589]
+
+epoch: 0, batch: 134, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.876879]
+
+epoch: 0, batch: 136, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.877168]
+
+epoch: 0, batch: 138, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.877455]
+
+epoch: 0, batch: 140, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.876172]
+
+epoch: 0, batch: 142, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.868752]
+
+epoch: 0, batch: 144, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869038]
+
+epoch: 0, batch: 146, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869322]
+
+epoch: 0, batch: 148, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869604]
+
+epoch: 0, batch: 150, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.869885]
+
+epoch: 0, batch: 152, test_auc: 	lod: {}
+	dim: 1
+	layout: NCHW
+	dtype: double
+	data: [0.870164]
+
+epoch :0, dir: increment/0

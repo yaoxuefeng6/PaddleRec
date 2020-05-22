@@ -1,0 +1,104 @@
+syntax = "proto3";
+package user_info;
+
+import "item_info.proto";
+
+message UserInfo {
+    string user_id = 1;                                     // 用户ID
+    string username = 2;                                    // 用户名
+    string nickname = 3;                                    // 昵称
+    uint32 age = 4;                                         // 年龄
+    string gender = 5;                                      // 性别
+    string education = 6;                                   // 学历
+    string life_stage = 7;                                  // 人生阶段
+    string constellation = 8;                               // 星座
+    string company = 9;                                     // 公司
+    string department = 10;                                 // 部门
+    string email = 11;                                      // 邮件
+    string job = 12;                                        // 工作职位 
+
+    // 主题标签 
+    repeated item_info.Topic long_topics = 13;              // 长期兴趣主题
+    repeated item_info.Topic short_topics = 14;             // 短期兴趣主题
+    repeated item_info.Topic selected_topics = 15;          // 冷启动过程中，用户选择的兴趣主题
+
+    // 细粒度实体标签
+    repeated item_info.Tag long_tags = 16;                  // 长期兴趣实体
+    repeated item_info.Tag short_tags = 17;                 // 短期兴趣实体
+
+    // 实时用户行为
+    repeated Event events = 18;                             // 用户近期行为
+};
+
+message Event {
+    enum Action {
+        CLICK = 0;                     // 点击观看
+        COLLECT = 1;                   // 收藏
+    };
+    string log_id = 1;                 // log_id （同一session中，同一条物料点击和关闭分为两个event，其log_id相同）
+    string item_id = 2;                // 物料id
+    Action action = 3;                 // 用户行为类型
+    uint32 start_time = 4;             // 行为开始时间戳
+    uint32 end_time = 5;               // 行为结束时间戳
+};
+
+message EventForProfileUpdate {
+    enum Action {
+        CLICK = 0;                     // 点击观看
+        COLLECT = 1;                   // 收藏
+    };
+    string log_id = 1;                 // log_id （同一session中，同一条物料点击和关闭分为两个event，其log_id相同）
+    string item_id = 2;                // 物料id
+    Action action = 3;                 // 用户行为类型
+    uint32 start_time = 4;             // 行为开始时间戳
+    uint32 end_time = 5;               // 行为结束时间戳
+    item_info.Topic topic_category = 6;  // 物料分类标签
+}
+
+/* user_attribute字段样例
+{
+    "user_id": "xxx",
+    "username": "xxx"     // 用户名
+    "nickname": "xxx",    // 昵称
+    "age": 32,            // 年龄
+    "gender": "male",     // 性别
+    "education": "本科",   // 教育程序
+    "life_stage": "新婚",  // 人生阶段
+    "constellation": "天平", // 星座
+ 
+    "company": "baidu",    // 所有公司
+    "department": "SO",    // 部门
+    "email": "xxx",        // 邮件
+    "job": "xxx",          // 工作职位
+ 
+    "longterm_interests": [          // 长期兴趣主题
+        {
+            "term": "电影",
+            "weight": 1.0
+        }
+    ],
+ 
+    "shortterm_interests": [          // 短期兴趣主题
+        {
+            "term": "电影",
+            "weight": 1.0
+        }
+    ],
+    "tags": [            // 挖掘的标签
+        {
+            "term": "高消费人群",
+            "weight": 0.4,
+            "resource": "xxx|yyy",
+        }
+    ],
+    "events": [          // 用户近期交互事件，如点击、收藏等
+        {
+            "log_id" : "yyy",        // log_id （同一session中，同一条物料点击和关闭分为两个event，其log_id相同）
+            "item_id": "xxx",        // 物料ID
+            "action": "click",       // 用户行为类型
+            "start_time": 14433333,  // 行为开始时间戳
+            "end_time": 14455555,    // 行为结束时间戳
+        }
+    ]
+}
+*/

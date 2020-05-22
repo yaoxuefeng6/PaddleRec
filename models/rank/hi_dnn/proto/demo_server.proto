@@ -1,0 +1,15 @@
+syntax = "proto3";
+package demo_server;
+option cc_generic_services = false;
+
+message DemoServiceRequest {
+    uint64 req_id = 1;
+};
+
+message DemoServiceResponse {
+    uint64 status = 1;
+};
+
+service DemoService {
+    rpc func(DemoServiceRequest) returns (DemoServiceResponse);
+};
